@@ -1,0 +1,15 @@
+<p [hidden]="isHidden"> {{ title }}</p>
+<div
+  (click)="changeBehaviour()"
+  class="alert alert-success">
+  <input
+    #messageInput
+    type="text" class="form-control">
+  Le contenu de l'input est : {{ message }}
+  <button
+    (click)="showMessage(messageInput.value)"
+    class="btn-dark">
+    Show Input content
+  </button>
+  <app-second></app-second>
+</div>
