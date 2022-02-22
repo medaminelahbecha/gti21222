@@ -1,0 +1,29 @@
+<p
+  [ngStyle]="{
+    color: color,
+    fontSize: size + 'px',
+    fontFamily: font,
+    textAlign: align
+  }"
+>GTI</p>
+<div class="row">
+  <div class="col">
+    <input type="color" class="form-control" [(ngModel)]="color">
+  </div>
+  <div class="col">
+    <input type="number" class="form-control" [(ngModel)]="size">
+  </div>
+  <div class="col">
+    <select class="form-control" [(ngModel)]="font">
+      <option value="verdana">verdana</option>
+      <option value="garamond">garamond</option>
+      <option value="arial">arial</option>
+    </select>
+  </div>
+  <div class="col">
+    <i class="fa fa-align-left fa-3x" aria-hidden="true" (click)="changeAlign('left')"></i>
+    <i class="fa fa-align-center fa-3x" aria-hidden="true" (click)="changeAlign('center')"></i>
+    <i class="fa fa-align-right fa-3x" aria-hidden="true" (click)="changeAlign('right')"></i>
+    <i class="fa fa-align-justify fa-3x" aria-hidden="true" (click)="changeAlign('justify')"></i>
+  </div>
+</div>
