@@ -27,6 +27,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { Btc2UsdPipe } from './pipes/btc2-usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import {Logger} from "./services/logger";
+import {SayHelloService} from "./services/say-hello.service";
 
 
 @NgModule({
@@ -57,7 +59,7 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SayHelloService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
