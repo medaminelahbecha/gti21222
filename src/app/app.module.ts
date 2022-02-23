@@ -34,6 +34,8 @@ import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
+import { LoginComponent } from './login/login.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { TestFormComponent } from './components/test-form/test-form.component';
     DefaultImagePipe,
     TodoComponent,
     EmbaucheComponent,
-    TestFormComponent
+    TestFormComponent,
+    LoginComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
