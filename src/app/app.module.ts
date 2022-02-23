@@ -29,6 +29,7 @@ import { Btc2UsdPipe } from './pipes/btc2-usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import {Logger} from "./services/logger";
 import {SayHelloService} from "./services/say-hello.service";
+import { TodoComponent } from './todo/todo/todo.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import {SayHelloService} from "./services/say-hello.service";
     HighlightDirective,
     RainbowDirective,
     Btc2UsdPipe,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
