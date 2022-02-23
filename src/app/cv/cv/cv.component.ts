@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Cv} from "../model/cv";
 import {Logger} from "../../services/logger";
 import {SayHelloService} from "../../services/say-hello.service";
+import {TodoService} from "../../todo/services/todo.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-cv',
@@ -12,16 +14,20 @@ export class CvComponent implements OnInit {
   selectedCv: Cv | null = null;
   constructor(
     private logger: Logger,
-    private sayHello: SayHelloService
+    private sayHello: SayHelloService,
+    private todoService: TodoService,
+    private toastr: ToastrService
   ) {
   }
   date = new Date();
   ngOnInit(): void {
     this.logger.logger('cc je suis le cv component');
     this.sayHello.hello();
+    this.toastr.info('Bienvenu dans notre CvTech');
   }
 
   onForwardCv(cv: Cv) {
     this.selectedCv = cv;
+    this.todoService.loggerTodo();
   }
 }

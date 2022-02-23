@@ -30,6 +30,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import {Logger} from "./services/logger";
 import {SayHelloService} from "./services/say-hello.service";
 import { TodoComponent } from './todo/todo/todo.component';
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { TodoComponent } from './todo/todo/todo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [SayHelloService],
   bootstrap: [AppComponent]
