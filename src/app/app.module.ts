@@ -32,6 +32,7 @@ import {SayHelloService} from "./services/say-hello.service";
 import { TodoComponent } from './todo/todo/todo.component';
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     RainbowDirective,
     Btc2UsdPipe,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,

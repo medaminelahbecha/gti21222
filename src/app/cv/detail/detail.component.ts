@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Cv} from "../model/cv";
+import {EmbaucheService} from "../services/embauche.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-detail',
@@ -9,9 +11,17 @@ import {Cv} from "../model/cv";
 export class DetailComponent implements OnInit {
   // detailComponent(cv) {}
   @Input() cv: Cv | null = null;
-  constructor() { }
+  constructor(
+    private embaucheService: EmbaucheService,
+    private toaster: ToastrService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  embaucher() {
+    if (this.cv && !this.embaucheService.embaucher(this.cv)) {
+      this.toaster.warning(`Le cv de ${this.cv.name} est déjà sélectionné`);
+    }
+  }
 }
