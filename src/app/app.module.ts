@@ -41,6 +41,7 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 import { FrontComponent } from './components/front/front.component';
 import { BackComponent } from './components/back/back.component';
 import { NF404Component } from './components/nf404/nf404.component';
+import { TestObservableComponent } from './components/test-observable/test-observable.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { NF404Component } from './components/nf404/nf404.component';
     DetailCvComponent,
     FrontComponent,
     BackComponent,
-    NF404Component
+    NF404Component,
+    TestObservableComponent
   ],
   imports: [
     BrowserModule,
