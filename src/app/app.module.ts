@@ -36,6 +36,8 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
 import { LoginComponent } from './login/login.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import { HeaderComponent } from './header/header.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 
 
 @NgModule({
@@ -64,7 +66,9 @@ import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
     EmbaucheComponent,
     TestFormComponent,
     LoginComponent,
-    AddPersonneComponent
+    AddPersonneComponent,
+    HeaderComponent,
+    DetailCvComponent
   ],
   imports: [
     BrowserModule,
