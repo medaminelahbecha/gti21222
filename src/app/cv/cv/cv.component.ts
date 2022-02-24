@@ -11,7 +11,7 @@ import {ToastrService} from "ngx-toastr";
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-  selectedCv: Cv | null = null;
+  // selectedCv: Cv | null = null;
   constructor(
     private logger: Logger,
     private sayHello: SayHelloService,
@@ -26,8 +26,8 @@ export class CvComponent implements OnInit {
     this.toastr.info('Bienvenu dans notre CvTech');
   }
 
-  onForwardCv(cv: Cv) {
-    this.selectedCv = cv;
-    this.todoService.loggerTodo();
-  }
+  // onForwardCv(cv: Cv) {
+  //   this.selectedCv = cv;
+  //   this.todoService.loggerTodo();
+  // }
 }

@@ -8,14 +8,14 @@ import {Cv} from "../model/cv";
 })
 export class ItemComponent implements OnInit {
   @Input() cv: Cv | null = null;
-  @Output() selectCv = new EventEmitter<Cv>();
+  // @Output() selectCv = new EventEmitter<Cv>();
   @Input() size = 50;
   constructor() { }
   ngOnInit(): void {
   }
   selectCvEvent() {
-    if (this.cv)
-      this.selectCv.emit(this.cv);
+    // if (this.cv)
+    //   this.selectCv.emit(this.cv);
   }
 
 }
