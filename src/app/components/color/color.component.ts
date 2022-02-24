@@ -22,6 +22,11 @@ export class ColorComponent implements OnInit {
         this.toaster.info(`Bienvenu ${mesParams.name}`);
       }
     );
+    this.activatedRoute.queryParams.subscribe(
+      (mesQp) => {
+        console.log(mesQp);
+      }
+    );
   }
   changeColor(newColor: string): void {
     this.bgc = newColor;

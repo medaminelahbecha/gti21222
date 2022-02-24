@@ -38,6 +38,9 @@ import { LoginComponent } from './login/login.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
+import { FrontComponent } from './components/front/front.component';
+import { BackComponent } from './components/back/back.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 
 @NgModule({
@@ -68,7 +71,10 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
     LoginComponent,
     AddPersonneComponent,
     HeaderComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    FrontComponent,
+    BackComponent,
+    NF404Component
   ],
   imports: [
     BrowserModule,

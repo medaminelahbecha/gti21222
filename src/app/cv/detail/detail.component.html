@@ -56,7 +56,13 @@
         <button
           (click)="embaucher()"
           class="btn btn-primary">embaucher</button>
+        <button
+          [routerLink]="['/cv',cv?.id]"
+          class="btn btn-success">
+          Détails
+        </button>
       </div>
+
     </div> <!-- end back panel -->
   </div> <!-- end card -->
 </div>
