@@ -42,6 +42,8 @@ import { FrontComponent } from './components/front/front.component';
 import { BackComponent } from './components/back/back.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import {HttpClientModule} from "@angular/common/http";
+import { TestHttpComponent } from './components/test-http/test-http.component';
 
 
 @NgModule({
@@ -76,7 +78,8 @@ import { TestObservableComponent } from './components/test-observable/test-obser
     FrontComponent,
     BackComponent,
     NF404Component,
-    TestObservableComponent
+    TestObservableComponent,
+    TestHttpComponent
   ],
   imports: [
     BrowserModule,
@@ -84,6 +87,7 @@ import { TestObservableComponent } from './components/test-observable/test-obser
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    HttpClientModule
   ],
   providers: [SayHelloService],
   bootstrap: [AppComponent]
