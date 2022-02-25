@@ -4,6 +4,7 @@ import {CvService} from "../services/cv.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
 import {MES_ROUTES} from "../../config/mes-routes.config";
+import {AuthService} from "../../auth/auth.service";
 
 @Component({
   selector: 'app-detail-cv',
@@ -16,7 +17,8 @@ export class DetailCvComponent implements OnInit {
     private cvService: CvService,
     private router: Router,
     private toaster: ToastrService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public authService: AuthService
   ) { }
 
   ngOnInit(): void {
