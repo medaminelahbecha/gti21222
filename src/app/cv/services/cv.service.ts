@@ -26,19 +26,14 @@ export class CvService {
     return this.http.get<Cv>(APIS.cv + id);
   }
   deleteCv(cv: Cv): Observable<DeleteCvResponse> {
-    const token = localStorage.getItem('token');
-    if (token) {
-      const headers = new HttpHeaders().set('Authorization', token);
-      return this.http.delete<DeleteCvResponse>(APIS.cv + cv.id, {headers});
-    }
     return this.http.delete<DeleteCvResponse>(APIS.cv + cv.id);
   }
   addCv(cv: Cv): Observable<Cv> {
     const token = localStorage.getItem('token');
-    if (token) {
-      const params = new HttpParams().set('access_token', token);
-      return this.http.post<Cv>(APIS.cv, cv, {params});
-    }
+    // if (token) {
+    //   const params = new HttpParams().set('access_token', token);
+    //   return this.http.post<Cv>(APIS.cv, cv, {params});
+    // }
     return this.http.post<Cv>(APIS.cv, cv);
   }
   selectCv(cv: Cv) {

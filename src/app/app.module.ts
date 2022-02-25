@@ -44,6 +44,7 @@ import { NF404Component } from './components/nf404/nf404.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
 import {HttpClientModule} from "@angular/common/http";
 import { TestHttpComponent } from './components/test-http/test-http.component';
+import {AuthentificationInterceptorProvider} from "./auth/auth.interceptor";
 
 
 @NgModule({
@@ -89,7 +90,7 @@ import { TestHttpComponent } from './components/test-http/test-http.component';
     ToastrModule.forRoot(), // ToastrModule added
     HttpClientModule
   ],
-  providers: [SayHelloService],
+  providers: [AuthentificationInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

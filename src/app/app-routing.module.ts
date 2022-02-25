@@ -12,6 +12,7 @@ import {FrontComponent} from "./components/front/front.component";
 import {BackComponent} from "./components/back/back.component";
 import {NF404Component} from "./components/nf404/nf404.component";
 import {LoginComponent} from "./auth/login/login.component";
+import {AuthGuard} from "./auth/guards/auth.guard";
 
 const routes: Routes = [
   {path: '', component: FirstComponent},
@@ -19,7 +20,7 @@ const routes: Routes = [
   {path: '', component: FrontComponent, children: [
       {path: 'cv', children: [
           {path: '', component: CvComponent},
-          {path: 'add', component: AddPersonneComponent},
+          {path: 'add', component: AddPersonneComponent, canActivate: [AuthGuard]},
           {path: ':id', component: DetailCvComponent},
       ]},
       {path: 'word', component: MiniWordComponent},
