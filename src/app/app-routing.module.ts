@@ -11,9 +11,11 @@ import {AddPersonneComponent} from "./cv/add-personne/add-personne.component";
 import {FrontComponent} from "./components/front/front.component";
 import {BackComponent} from "./components/back/back.component";
 import {NF404Component} from "./components/nf404/nf404.component";
+import {LoginComponent} from "./auth/login/login.component";
 
 const routes: Routes = [
   {path: '', component: FirstComponent},
+  {path: 'login', component: LoginComponent},
   {path: '', component: FrontComponent, children: [
       {path: 'cv', children: [
           {path: '', component: CvComponent},

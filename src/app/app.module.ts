@@ -34,7 +34,7 @@ import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';

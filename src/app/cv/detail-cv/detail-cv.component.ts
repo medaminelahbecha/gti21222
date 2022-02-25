@@ -47,7 +47,6 @@ export class DetailCvComponent implements OnInit {
           },
           error: (erreur) => {
             console.log(erreur);
-
             this.toaster.error(`Problème avec le serveur veuillez contacter l'admin`);
           }
         }
