@@ -39,8 +39,19 @@ export class DetailCvComponent implements OnInit {
 
   delete() {
     if (this.cv) {
-      this.cvService.deleteCv(this.cv);
-      this.router.navigate([MES_ROUTES.cv]);
+      this.cvService.deleteCv(this.cv).subscribe(
+        {
+          next: () => {
+            this.toaster.success(`${this.cv?.firstname} ${this.cv?.firstname} a été supprimé avec succès`);
+            this.router.navigate([MES_ROUTES.cv]);
+          },
+          error: (erreur) => {
+            console.log(erreur);
+
+            this.toaster.error(`Problème avec le serveur veuillez contacter l'admin`);
+          }
+        }
+      );
     }
   }
 }

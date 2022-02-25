@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {CvService} from "../services/cv.service";
 import {Router} from "@angular/router";
@@ -16,15 +16,26 @@ export class AddPersonneComponent implements OnInit {
     private cvService: CvService,
     private router: Router,
     private toaster: ToastrService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
   addCv(formumaire: NgForm) {
-    this.cvService.addCv(formumaire.value);
-    this.toaster.success(`Le cv de ${formumaire.value.firstname} ${formumaire.value.name}
+    this.cvService.addCv(formumaire.value).subscribe(
+      {
+        next: () => {
+          this.toaster.success(`Le cv de ${formumaire.value.firstname} ${formumaire.value.name}
      a été ajouté avec succès`);
-    this.router.navigate([MES_ROUTES.cv]);
+          this.router.navigate([MES_ROUTES.cv]);
+        },
+        error: (erreur) => {
+          console.log(erreur);
+          this.toaster.error(`Problème avec le serveur veuillez contacter l'admin`);
+        },
+      }
+    );
+
   }
 }
